@@ -1,0 +1,147 @@
+<resources>
+	<fonts>
+    	<font id="Garmin2" filename="fonts/Oswald75.fnt"/>
+    	<font id="Garmin3" filename="fonts/Oswald45labelPowerdashboardplus-unbold.fnt"/>
+    	<font id="Garmin4" filename="fonts/Oswald83.fnt"/>
+	</fonts>
+  <properties>
+    <property id="pPowerAveraging" type="number">1</property>
+    <property id="pUpperRightMetric" type="number">0</property>
+    <property id="pBottomLeftMetric" type="number">1</property>
+    <property id="pBottomRightMetric" type="number">2</property>
+    <property id="pBacklight" type="boolean">false</property>
+    <property id="myNumber" type="number">12345678</property>
+    <property id="pShowDemo" type="boolean">false</property>
+    <property id="pPowerZones" type="string">180:Z1:210:Z2:240:Z3:270:Z4:300:Z5:330:Z6:360:Z7:390:Z8:420:Z9:450:Z10:480</property>
+    <property id="pRequiredPower" type="string">000:999</property>
+    <property id="pWarningFreq" type="number">5</property>    
+  </properties>
+
+	
+  <strings>
+    <!-- Release name: -->
+    <string id="AppName">Powerdashboard for Stryd plus 10 zones</string>
+    <!-- Beta name:
+    <string id="AppName">Powerdashboard for Stryd plus 10 zones</string>
+    -->
+    <string id="AppVersion">1.0</string>
+	<string id="lAEFactor">Average efficiency factor (average speed in meters per minute,  divided by average heartrate in beats/minute)</string>
+	<string id="lAEIndex">Average efficiency index (average speed in meters per minute, divided by average Stryd power in watts)</string>
+	<string id="lLEFactor">Current lap efficiency factor (current lap speed in meters per minute,  divided by current lap heartrate in beats/minute)</string>
+	<string id="lLEIndex">Current lap efficiency index (current lap speed in meters per minute, divided by current lap Stryd power in watts)</string>
+	<string id="lLLEFactor">Last lap average efficiency factor (last lap speed in meters per minute,  divided by last lap heartrate in beats/minute)</string>
+	<string id="lLLEIndex">Last lap efficiency Index (last lap speed in meters per minute, divided by last lap Stryd power in watts)</string>
+	<string id="lAEI0">Current efficiency index </string>
+	<string id="lAEI3">Rolling efficiency index over the last 3 seconds</string>
+	<string id="lAEI5">Rolling efficiency index over the last 5 seconds</string>
+	<string id="lAEI10">Rolling efficiency index over the last 10 seconds</string>
+	<string id="lAEI20">Rolling efficiency index over the last 20 seconds</string>
+	<string id="lAEI30">Rolling efficiency index over the last 30 seconds</string>
+    <string id="lAPower">Average Stryd footpod power</string>
+    <string id="lLPower">Lap Stryd footpod power</string>
+	<string id="lLLPower">Last lap Stryd footpod power</string>
+	<string id="lPowerzone">Current powerzone</string>	
+    <string id="lAvgPwr30bottom">Average power over 30 seconds</string>
+    <string id="lUpperRightMetric">Upper right field</string>
+    <string id="lBottomLeftMetric">Bottom left field</string>
+    <string id="lBottomRightMetric">Bottom right field</string>
+    <string id="lPowerAveraging">Power averaging</string>
+    <string id="lAvgPwrNone">No power averaging</string>
+    <string id="lAvgPwr3">Over 3 seconds</string>
+    <string id="lAvgPwr5">Over 5 seconds</string>
+    <string id="lAvgPwr10">Over 10 seconds</string>
+	<string id="lAvgPwr20">Over 20 seconds)</string> 
+    <string id="lAvgPwr30">Over 30 seconds)</string> 
+    <string id="lPace">Pace</string>
+    <string id="lPace3sec">Pace averaged over 3 seconds</string>    
+    <string id="lHR">Heartrate</string>
+    <string id="lBacklight">Force backlight on, regardless of device settings</string>
+    <string id="lShowDemo">Show demo view for ID's and check license</string>
+    <string id="MyNumberTitle">Enter license key</string>
+    <string id="MyNumberError">Not valid, only numbers allowed!</string>
+    <string id="lPowerZones">Power zones, a format required like 180:Z1:210:Z2:240:Z3:270:Z4:300:Z5:330:Z6:360:Z7:390:Z8:420:Z9:450:Z10:480</string>
+    <string id="lRequiredPower">Boundaries for warning signal, a format required like (227:284)</string>
+    <string id="lWarningFreq">Frequency for the warning signal</string>
+  </strings>
+
+
+  <settings>
+  	<setting propertyKey="@Properties.pShowDemo" title="@Strings.lShowDemo">
+      <settingConfig type="boolean" required="true" />
+    </setting>
+    <setting propertyKey="@Properties.pBacklight" title="@Strings.lBacklight">
+      <settingConfig type="boolean" required="true" />
+    </setting>
+    <setting propertyKey="@Properties.myNumber" title="@Strings.MyNumberTitle">
+        <settingConfig type="numeric" errorMessage="@Strings.MyNumberError" />
+    </setting>
+    <setting propertyKey="@Properties.pPowerAveraging" title="@Strings.lPowerAveraging">
+      <settingConfig type="list" required="true">
+        <listEntry value="0">@Strings.lAvgPwrNone</listEntry>
+        <listEntry value="1">@Strings.lAvgPwr3</listEntry>
+        <listEntry value="2">@Strings.lAvgPwr5</listEntry>
+        <listEntry value="3">@Strings.lAvgPwr10</listEntry>
+		<listEntry value="4">@Strings.lAvgPwr20</listEntry>
+        <listEntry value="5">@Strings.lAvgPwr30</listEntry>		
+      </settingConfig>
+      </setting>
+    <setting propertyKey="@Properties.pUpperRightMetric" title="@Strings.lUpperRightMetric">
+      <settingConfig type="list" required="true">
+        <listEntry value="0">@Strings.lLPower</listEntry>
+        <listEntry value="1">@Strings.lPowerzone</listEntry>
+        <listEntry value="4">@Strings.lLEIndex</listEntry>
+        <listEntry value="7">@Strings.lLEFactor</listEntry>
+        <listEntry value="9">@Strings.lAvgPwr30bottom</listEntry>
+        <listEntry value="10">@Strings.lAEI0</listEntry>
+        <listEntry value="11">@Strings.lAEI3</listEntry>
+		<listEntry value="16">@Strings.lHR</listEntry>
+		<listEntry value="17">@Strings.lPace</listEntry>
+		<listEntry value="18">@Strings.lPace3sec</listEntry>
+      </settingConfig>
+    </setting>      
+    <setting propertyKey="@Properties.pBottomLeftMetric" title="@Strings.lBottomLeftMetric">
+      <settingConfig type="list" required="true">
+        <listEntry value="0">@Strings.lLPower</listEntry>
+        <listEntry value="1">@Strings.lAPower</listEntry>        
+        <listEntry value="2">@Strings.lLLPower</listEntry>
+        <listEntry value="3">@Strings.lAEIndex</listEntry>
+        <listEntry value="4">@Strings.lLEIndex</listEntry>
+        <listEntry value="5">@Strings.lLLEIndex</listEntry>
+        <listEntry value="6">@Strings.lAEFactor</listEntry>
+        <listEntry value="7">@Strings.lLEFactor</listEntry>
+        <listEntry value="8">@Strings.lLLEFactor</listEntry>
+        <listEntry value="9">@Strings.lAvgPwr30bottom</listEntry>
+        <listEntry value="10">@Strings.lAEI0</listEntry>
+        <listEntry value="11">@Strings.lAEI3</listEntry>
+        <listEntry value="12">@Strings.lAEI5</listEntry>
+        <listEntry value="13">@Strings.lAEI10</listEntry>
+        <listEntry value="14">@Strings.lAEI20</listEntry>        
+		<listEntry value="15">@Strings.lAEI30</listEntry>
+      </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.pBottomRightMetric" title="@Strings.lBottomRightMetric">
+      <settingConfig type="list" required="true">
+        <listEntry value="0">@Strings.lLPower</listEntry>
+        <listEntry value="1">@Strings.lAPower</listEntry>        
+        <listEntry value="3">@Strings.lAEIndex</listEntry>
+        <listEntry value="4">@Strings.lLEIndex</listEntry>
+        <listEntry value="6">@Strings.lAEFactor</listEntry>
+        <listEntry value="9">@Strings.lAvgPwr30bottom</listEntry>
+        <listEntry value="10">@Strings.lAEI0</listEntry>
+        <listEntry value="11">@Strings.lAEI3</listEntry>
+       </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.pPowerZones" title="@Strings.lPowerZones">
+      <settingConfig type="alphaNumeric"  required="true"/>
+    </setting>
+    <setting propertyKey="@Properties.pRequiredPower" title="@Strings.lRequiredPower">
+      <settingConfig type="alphaNumeric"  required="true"/>
+    </setting>
+    <setting propertyKey="@Properties.pWarningFreq" title="@Strings.lWarningFreq">
+      <settingConfig type="numeric" />
+    </setting>
+  </settings>
+ 
+  <bitmap id="LauncherIcon" filename="launcher_icon.png"></bitmap>
+
+</resources>
