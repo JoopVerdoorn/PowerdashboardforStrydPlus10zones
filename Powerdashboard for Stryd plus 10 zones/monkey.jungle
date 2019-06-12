@@ -1,1 +1,25 @@
 project.manifest = manifest.xml
+
+# fix autobuild to be a specific device
+base.sourcePath=$(fr935.sourcePath)
+ 
+# define the actual sourcePaths
+fenix5s.sourcePath		=	resources-round-218x218
+fenixchronos.sourcePath	=	resources-round-218x218
+fr735xt.sourcePath		=	resources-semiround-215x180
+fr935.sourcePath		=	resources-round-240x240
+fenix5.sourcePath		=	resources-round-240x240
+fenix5x.sourcePath		=   resources-round-240x240-extra
+fenix5plus.sourcePath	=   resources-round-240x240-extra
+fenix5splus.sourcePath	=   resources-round-240x240-extra
+fenix5xplus.sourcePath	=   resources-round-240x240-extra
+d2charlie.sourcePath	=   resources-round-240x240-extra
+d2delta.sourcePath		=   resources-round-240x240-extra
+d2deltapx.sourcePath	=   resources-round-240x240-extra
+d2deltas.sourcePath		=   resources-round-240x240-extra
+fr945.sourcePath		=   resources-round-240x240-extra
+marqathlete.sourcePath	=   resources-round-240x240-extra
+marqaviator.sourcePath	=   resources-round-240x240-extra
+marqcaptain.sourcePath	=   resources-round-240x240-extra
+marqdriver.sourcePath	=   resources-round-240x240-extra
+marqexpedition.sourcePath = resources-round-240x240-extra

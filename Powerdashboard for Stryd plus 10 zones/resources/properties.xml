@@ -3,6 +3,8 @@
     	<font id="Garmin2" filename="fonts/Oswald75.fnt"/>
     	<font id="Garmin3" filename="fonts/Oswald45labelPowerdashboardplus-unbold.fnt"/>
     	<font id="Garmin4" filename="fonts/Oswald83.fnt"/>
+    	<font id="Garmin5" filename="fonts/Oswald45labelPowerdashboardplus-unbold.fnt" antialias="true"/>
+    	<font id="Garmin6" filename="fonts/Oswald83.fnt" antialias="true"/>    	
 	</fonts>
   <properties>
     <property id="pPowerAveraging" type="number">1</property>
