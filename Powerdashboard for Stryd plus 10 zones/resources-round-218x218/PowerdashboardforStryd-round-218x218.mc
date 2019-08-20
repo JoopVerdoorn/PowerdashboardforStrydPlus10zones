@@ -81,17 +81,6 @@ class DatarunView extends Toybox.WatchUi.DataField {
     var Pace18									= 0;
 	var Pace19 									= 0;
     var Pace20									= 0;
-	var Pace21 									= 0;
-    var Pace22 									= 0;
-    var Pace23 									= 0;
-	var Pace24 									= 0;
-    var Pace25 									= 0;
-	var Pace26 									= 0;
-    var Pace27 									= 0;
-    var Pace28 									= 0;
-	var Pace29 									= 0;
-    var Pace30									= 0;
-
 
     //! License serial
     hidden var umyNumber                    = 0;
@@ -385,16 +374,15 @@ class DatarunView extends Toybox.WatchUi.DataField {
 				AveragePower5sec= (Power1+Power2+Power3+Power4+Power5)/5;
 				AveragePower10sec= (Power1+Power2+Power3+Power4+Power5+Power6+Power7+Power8+Power9+Power10)/10;
 				AveragePower20sec= (Power1+Power2+Power3+Power4+Power5+Power6+Power7+Power8+Power9+Power10+Power11+Power12+Power13+Power14+Power15+Power16+Power17+Power18+Power19+Power20)/20;
-				AveragePower30sec= (Power1+Power2+Power3+Power4+Power5+Power6+Power7+Power8+Power9+Power10+Power11+Power12+Power13+Power14+Power15+Power16+Power17+Power18+Power19+Power20+Power21+Power22+Power23+Power24+Power25+Power26+Power27+Power28+Power29+Power30)/30;
-			}
+				AveragePower30sec= (Power1+Power2+Power3+Power4+Power5+Power6+Power7+Power8+Power9+Power10+Power11+Power12+Power13+Power14+Power15+Power16+Power17+Power18+Power19+Power20+Power21+Power22+Power23+Power24+Power25+Power26+Power27+Power28+Power29+Power30)/30;			
+				}
  		}
 
 
         var AveragePace3sec  	 			= 0;
         var AveragePace5sec  	 			= 0;
         var AveragePace10sec  	 			= 0;
-        var AveragePace20sec  	 			= 0;
-        var AveragePace30sec  	 			= 0;        
+        var AveragePace20sec  	 			= 0;     
         var currentPacetest				= 0;
         if (info.currentSpeed != null) {
         	currentPacetest = info.currentSpeed; 
@@ -407,16 +395,6 @@ class DatarunView extends Toybox.WatchUi.DataField {
         		} else {
         			Pace1								= 0;
 				}
-				Pace30								= Pace29;
-        		Pace29 							= Pace28;
-        		Pace28 							= Pace27;
-        		Pace27 							= Pace26;
-        		Pace26 							= Pace25;
-        		Pace25 							= Pace24;
-        		Pace24 							= Pace23;
-        		Pace23 							= Pace22;
-        		Pace22 							= Pace21;
-        		Pace21 							= Pace20;
         		Pace20 							= Pace19;
         		Pace19 							= Pace18;
         		Pace18 							= Pace17;
@@ -439,8 +417,7 @@ class DatarunView extends Toybox.WatchUi.DataField {
 				AveragePace3sec= (Pace1+Pace2+Pace3)/3;
 				AveragePace5sec= (Pace1+Pace2+Pace3+Pace4+Pace5)/5;
 				AveragePace10sec= (Pace1+Pace2+Pace3+Pace4+Pace5+Pace6+Pace7+Pace8+Pace9+Pace10)/10;
-				AveragePace20sec= (Pace1+Pace2+Pace3+Pace4+Pace5+Pace6+Pace7+Pace8+Pace9+Pace10+Pace11+Pace12+Pace13+Pace14+Pace15+Pace16+Pace17+Pace18+Pace19+Pace20)/20;
-				AveragePace30sec= (Pace1+Pace2+Pace3+Pace4+Pace5+Pace6+Pace7+Pace8+Pace9+Pace10+Pace11+Pace12+Pace13+Pace14+Pace15+Pace16+Pace17+Pace18+Pace19+Pace20+Pace21+Pace22+Pace23+Pace24+Pace25+Pace26+Pace27+Pace28+Pace29+Pace30)/30;				
+				AveragePace20sec= (Pace1+Pace2+Pace3+Pace4+Pace5+Pace6+Pace7+Pace8+Pace9+Pace10+Pace11+Pace12+Pace13+Pace14+Pace15+Pace16+Pace17+Pace18+Pace19+Pace20)/20;				
 			}
  		}
 				
@@ -449,7 +426,6 @@ class DatarunView extends Toybox.WatchUi.DataField {
 		var AEIndex5 = (AveragePower5sec != 0) ? 60*(AveragePace5sec)/AveragePower5sec : 0;
 		var AEIndex10 = (AveragePower10sec != 0) ? 60*(AveragePace10sec)/AveragePower10sec : 0;
 		var AEIndex20 = (AveragePower20sec != 0) ? 60*(AveragePace20sec)/AveragePower20sec : 0;
-		var AEIndex30 = (AveragePower30sec != 0) ? 60*(AveragePace30sec)/AveragePower30sec : 0;
 
 		if (uPowerAveraging == 0) {
 			DisplayPower = (info.currentPower != null) ? info.currentPower : 0;
@@ -857,10 +833,6 @@ class DatarunView extends Toybox.WatchUi.DataField {
 		}  else if (uBottomLeftMetric == 14) {
             fieldValue = AEIndex20;
             fieldLabel = "AEI 20s";
-            fieldformat = "2decimal";
-        } else if (uBottomLeftMetric == 15) {
-            fieldValue = AEIndex30;
-            fieldLabel = "AEI 30s";
             fieldformat = "2decimal";
 		}
 

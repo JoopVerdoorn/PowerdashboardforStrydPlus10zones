@@ -38,7 +38,6 @@
 	<string id="lAEI5">Rolling efficiency index over the last 5 seconds</string>
 	<string id="lAEI10">Rolling efficiency index over the last 10 seconds</string>
 	<string id="lAEI20">Rolling efficiency index over the last 20 seconds</string>
-	<string id="lAEI30">Rolling efficiency index over the last 30 seconds</string>
     <string id="lAPower">Average Stryd footpod power</string>
     <string id="lLPower">Lap Stryd footpod power</string>
 	<string id="lLLPower">Last lap Stryd footpod power</string>
@@ -118,7 +117,6 @@
         <listEntry value="12">@Strings.lAEI5</listEntry>
         <listEntry value="13">@Strings.lAEI10</listEntry>
         <listEntry value="14">@Strings.lAEI20</listEntry>        
-		<listEntry value="15">@Strings.lAEI30</listEntry>
       </settingConfig>
     </setting>
     <setting propertyKey="@Properties.pBottomRightMetric" title="@Strings.lBottomRightMetric">
